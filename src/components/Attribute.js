@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Attribute extends Component {
   render() {
@@ -30,5 +31,12 @@ class Attribute extends Component {
     );
   }
 }
+
+Attribute.propTypes = {
+  onInputChange: PropTypes.func.isRequired,
+  cardAttr1: PropTypes.string.isRequired,
+  cardAttr2: PropTypes.string.isRequired,
+  cardAttr3: PropTypes.string.isRequired,
+};
 
 export default Attribute;

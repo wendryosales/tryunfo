@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Rare extends Component {
   render() {
@@ -36,5 +37,10 @@ class Rare extends Component {
     );
   }
 }
+
+Rare.propTypes = {
+  onInputChange: PropTypes.func.isRequired,
+  cardRare: PropTypes.string.isRequired,
+};
 
 export default Rare;

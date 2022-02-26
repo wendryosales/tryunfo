@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Image extends Component {
   render() {
@@ -15,5 +16,10 @@ class Image extends Component {
     );
   }
 }
+
+Image.propTypes = {
+  onInputChange: PropTypes.func.isRequired,
+  cardImage: PropTypes.string.isRequired,
+};
 
 export default Image;

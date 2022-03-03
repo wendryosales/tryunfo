@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Save extends Component {
   render() {
@@ -15,5 +16,10 @@ class Save extends Component {
     );
   }
 }
+
+Save.propTypes = {
+  isSaveButtonDisabled: PropTypes.bool.isRequired,
+  onSaveButtonClick: PropTypes.func.isRequired,
+};
 
 export default Save;

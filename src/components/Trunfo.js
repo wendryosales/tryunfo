@@ -4,7 +4,12 @@ import PropTypes from 'prop-types';
 class Trunfo extends Component {
   render() {
     const { onInputChange, cardTrunfo, cardItems } = this.props;
-    const hasTrunfo = cardItems.some((element) => element[7] === true);
+    let cardItemsV = cardItems;
+    if (cardItems === undefined) {
+      cardItemsV = [];
+      cardItemsV[7] = 'false';
+    }
+    const hasTrunfo = cardItemsV.some((element) => element[7] === true);
 
     if (hasTrunfo) {
       return (

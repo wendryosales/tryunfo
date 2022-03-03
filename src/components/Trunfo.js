@@ -13,16 +13,7 @@ class Trunfo extends Component {
 
     if (hasTrunfo) {
       return (
-        <label htmlFor="trunfo">
-          <p>Você já tem um Super Trunfo em seu baralho</p>
-          <input
-            onChange={ onInputChange }
-            data-testid="trunfo-input"
-            name="cardTrunfo"
-            type="checkbox"
-            checked={ cardTrunfo }
-          />
-        </label>
+        <p>Você já tem um Super Trunfo em seu baralho</p>
       );
     }
     return (
